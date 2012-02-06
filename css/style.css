@@ -301,6 +301,12 @@ header ul li.active a:visited {
     overflow: auto;
 }
 
+#header-inner-banner {
+	font-family: 'Dynalight', cursive;
+	font-size: 70px;
+	font-weight: normal;
+}
+
 #main {
 	min-height: 1000px;
 }
@@ -560,6 +566,11 @@ label.ss-q-title {
 	-moz-transition: all .3s ease-in-out;
 	-webkit-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
+}
+
+#page-registry-kapipal {
+	width: 100%;
+	text-align: center;
 }
 
 #page-registry ul {

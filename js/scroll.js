@@ -22,11 +22,11 @@ $(function() {
   }
 
   var PUSH = 580;
-  var to, prevToScroll;
+  //var to, prevToScroll;
   $doc.scroll(function(e) {
     scrollY = window.scrollY;
     
-    console.log(scrollY);
+    //console.log(scrollY);
 
     if (scrollY < 10) {
         $header.stop(true, false).animate({right: '50%'}, {queue: false}, 100);
@@ -39,11 +39,13 @@ $(function() {
         toScroll = 25; //nahhhhhh dog
       }
       
-      if(prevToScroll !== toScroll) {
+      /*if(prevToScroll !== toScroll) {
         $header.stop(true, false).animate({right: toScroll + '%'}, {queue: false}, toScroll === 25 ? 50 : 30);
       }
       
-      prevToScroll = toScroll;
+      prevToScroll = toScroll;*/
+
+	$header.stop(true, false).animate({right: toScroll + '%'}, {queue: false}, 30);
     }
     
   });

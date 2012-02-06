@@ -32,14 +32,14 @@ $(document).ready(function(){
 		}
 		else {
 			if ( !~$('.rsvp-email input').val().indexOf('@') ) {
-				invalid.push("Bad Email, yo");
+				invalid.push("Invalid email address");
 				$('.rsvp-email input').closest('.rsvp-block').addClass('rsvp-invalid');
 			}
 		}
 		
 		// there is an attendance
 		if ( !$('.rsvp-attend-yes input').is(':checked') && !$('.rsvp-attend-no input').is(':checked')  ) {
-			invalid.push("Let us know frealz");
+			invalid.push("Please select exactly one option");
 			$('.rsvp-attend-yes input').closest('.rsvp-block').addClass('rsvp-invalid');
 		}
 		else {
@@ -50,7 +50,7 @@ $(document).ready(function(){
 			else {
 				if ( $('.rsvp-party-other input').first().is(':checked') ) {
 					if ($('.rsvp-attend-yes input').is(':checked') && !$.trim($('.ss-q-other').val()).length ) {
-						invalid.push("What other?");
+						invalid.push("Please specify how many in your party");
 						$('.rsvp-party-other input').closest('.rsvp-block').addClass('rsvp-invalid');
 					}
 				}
